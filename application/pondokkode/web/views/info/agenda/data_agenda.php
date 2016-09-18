@@ -1,0 +1,56 @@
+<!--=== Breadcrumbs ===-->
+<div class="breadcrumbs">
+    <div class="container">
+        <ul class="pull-left breadcrumb">
+            <li><a href="<?php print base_url()?>">Home</a></li>
+            <li><a href="<?php print base_url()?>agenda/">Agenda</a></li>
+        </ul>
+    </div>
+</div><!--/breadcrumbs-->
+<!--=== Content Part ===-->
+<div class="container content">
+  <form action="<?php print base_url()?>web/agenda/search" method="POST">
+    <div class="input-group margin-bottom-40">
+        <input type="text" name="cari_agenda" autocomplete="off" class="form-control" placeholder="Cari Agenda FTI UNWAHA">
+        <span class="input-group-btn">
+            <button class="btn-u btn-u-lg btn-u" type="submit"><i class="fa fa-search"></i> Search</button>
+        </span>
+    </div>
+  </form>
+  <div class="row blog-page">
+        <!-- Left Sidebar -->
+      <div class="col-md-9">
+        <!--Blog Post-->
+          <div class="headline headline-md"><h2><i class="fa fa-calendar-check-o"></i> Agenda Terbaru</h2></div>
+          <?php print $data_agenda ?>
+    <!--Pagination-->
+    <div class="text-left">
+        <?php print $paging ?>
+    </div>
+     <!--End Pagination-->
+      </div>
+        <!-- End Left Sidebar -->
+
+<!-- Right Sidebar -->
+<div class="col-md-3 magazine-page">
+    <div class="posts margin-bottom-40">
+        <div class="headline headline-md"><h2><i class="fa fa-calendar-check-o"></i> Agenda</h2></div>
+        
+          <?php print $agenda_sidebar ?>
+        
+    </div><!--/posts-->
+    <div class="posts margin-bottom-40">
+        <div class="headline headline-md"><h2><i class="icon-pin"></i> Pengumuman</h2></div>
+        
+          <?php print $pengumuman_sidebar ?>
+        
+    </div><!--/posts-->
+    <!--Datepicker-->
+    <div class="headline headline-md"><h2><i class="fa fa-calendar-o"></i> Kalender <?php print date('Y') ?></h2></div>
+    <form action="#" id="sky-form2" class="sky-form">
+        <div id="inline-start"></div>
+    </form>
+    <!--End Datepicker-->
+  </div>
+</div>
+</div>
